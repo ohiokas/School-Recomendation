@@ -1,0 +1,14 @@
+USE smakkita;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS admission_path VARCHAR(40) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity_prestasi_akademik INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity_prestasi_nonakademik INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity_tahap_kedua INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity_afirmasi INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS capacity_zonasi INT UNSIGNED NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS accreditation VARCHAR(20) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS admission_prestasi_akademik DECIMAL(5,2) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS admission_prestasi_nonakademik DECIMAL(5,2) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS admission_tahap_kedua DECIMAL(5,2) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS admission_afirmasi DECIMAL(5,2) NULL;
+ALTER TABLE school_data ADD COLUMN IF NOT EXISTS admission_zonasi DECIMAL(5,2) NULL;
