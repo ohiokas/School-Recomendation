@@ -49,15 +49,45 @@ if (isset($_GET['export']) && $_GET['export'] === 'excel') {
                     WHERE i.student_id = s.id
                     ORDER BY i.score DESC, i.id ASC
                     LIMIT 1
-                ) AS focus_interest_percentage
+                ) AS focus_interest_percentage,
+
+                a.science,
+                a.social_studies,
+                a.indonesian,
+                a.english,
+                a.mathematics,
+                a.civics,
+                a.academic_average,
+
+                (
+                    SELECT GROUP_CONCAT(
+                        CONCAT(
+                            rd.rank_number,
+                            '. ',
+                            COALESCE(sd.name, 'School not found'),
+                            ' (',
+                            FORMAT(rd.score, 2),
+                            ')'
+                        )
+                        ORDER BY rd.rank_number ASC
+                        SEPARATOR ' | '
+                    )
+                    FROM recommendation_details rd
+                    INNER JOIN school_data sd ON sd.id = rd.school_id
+                    WHERE rd.recommendation_id = (
+                        SELECT r.id
+                        FROM recommendations r
+                        WHERE r.student_id = s.id
+                        ORDER BY r.created_at DESC, r.id DESC
+                        LIMIT 1
+                    )
+                    AND rd.rank_number <= 5
+                ) AS school_recommendations
 
             FROM users u
-
-            LEFT JOIN students s
-                ON s.user_id = u.id
-
+            LEFT JOIN students s ON s.user_id = u.id
+            LEFT JOIN academic_scores a ON a.student_id = s.id
             WHERE u.role = 'student'
-
             ORDER BY u.created_at DESC
         ")->fetchAll();
 
@@ -80,6 +110,14 @@ if (isset($_GET['export']) && $_GET['export'] === 'excel') {
             'Education Preference',
             'Focus Interest',
             'Interest Percentage',
+            'IPA',
+            'IPS',
+            'Bahasa Indonesia',
+            'Bahasa Inggris',
+            'Matematika',
+            'Pendidikan Pancasila',
+            'Academic Average',
+            'School Recommendations (Top 5)',
             'Admission Path',
             'Previous School',
             'Registered'
@@ -120,16 +158,20 @@ if (isset($_GET['export']) && $_GET['export'] === 'excel') {
                     $student['domicile'] ?? 'Not set',
                     ucfirst($educationPreference),
                     $focusInterest ?? 'Not set',
-                    $focusPercentage !== null
-                        ? (float)$focusPercentage
-                        : null,
+                    $focusPercentage !== null ? (float)$focusPercentage : null,
+                    $student['science'] !== null ? (float)$student['science'] : null,
+                    $student['social_studies'] !== null ? (float)$student['social_studies'] : null,
+                    $student['indonesian'] !== null ? (float)$student['indonesian'] : null,
+                    $student['english'] !== null ? (float)$student['english'] : null,
+                    $student['mathematics'] !== null ? (float)$student['mathematics'] : null,
+                    $student['civics'] !== null ? (float)$student['civics'] : null,
+                    $student['academic_average'] !== null ? (float)$student['academic_average'] : null,
+                    $student['school_recommendations'] ?? 'Not available',
                     ucfirst(
                         str_replace(
                             '_',
                             ' ',
-                            $admissionPath !== ''
-                                ? $admissionPath
-                                : 'Not set'
+                            $admissionPath !== '' ? $admissionPath : 'Not set'
                         )
                     ),
                     $student['previous_school'] ?? '-',
@@ -148,11 +190,11 @@ if (isset($_GET['export']) && $_GET['export'] === 'excel') {
         |--------------------------------------------------------------------------
         */
 
-        $sheet->getStyle('A1:J1')
+        $sheet->getStyle('A1:R1')
             ->getFont()
             ->setBold(true);
 
-        $sheet->getStyle('A1:J1')
+        $sheet->getStyle('A1:R1')
             ->getAlignment()
             ->setHorizontal(
                 \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER
@@ -160,7 +202,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'excel') {
 
         $sheet->freezePane('A2');
 
-        foreach (range('A', 'J') as $column) {
+        foreach (range('A', 'R') as $column) {
             $sheet->getColumnDimension($column)
                 ->setAutoSize(true);
         }
@@ -413,15 +455,38 @@ $students = db()->query("
             WHERE i.student_id = s.id
             ORDER BY i.score DESC, i.id ASC
             LIMIT 1
-        ) AS focus_interest_percentage
+        ) AS focus_interest_percentage,
+
+        a.academic_average,
+
+        (
+            SELECT GROUP_CONCAT(
+                CONCAT(
+                    rd.rank_number,
+                    '. ',
+                    COALESCE(sd.name, 'School not found'),
+                    ' — ',
+                    FORMAT(rd.score, 2)
+                )
+                ORDER BY rd.rank_number ASC
+                SEPARATOR '<br>'
+            )
+            FROM recommendation_details rd
+            INNER JOIN school_data sd ON sd.id = rd.school_id
+            WHERE rd.recommendation_id = (
+                SELECT r.id
+                FROM recommendations r
+                WHERE r.student_id = s.id
+                ORDER BY r.created_at DESC, r.id DESC
+                LIMIT 1
+            )
+            AND rd.rank_number <= 5
+        ) AS school_recommendations
 
     FROM users u
-
-    LEFT JOIN students s
-        ON s.user_id = u.id
-
+    LEFT JOIN students s ON s.user_id = u.id
+    LEFT JOIN academic_scores a ON a.student_id = s.id
     WHERE u.role = 'student'
-
     ORDER BY u.created_at DESC
 ")->fetchAll();
 
@@ -639,6 +704,10 @@ require __DIR__ . '/../includes/header.php';
 
                         <th>Percentage</th>
 
+                        <th>Academic Average</th>
+
+                        <th>School Recommendations</th>
+
                         <th>Admission Path</th>
 
                         <th>Previous School</th>
@@ -802,6 +871,37 @@ require __DIR__ . '/../includes/header.php';
 
                                 <?php endif; ?>
 
+                            </td>
+
+
+                            <!-- ACADEMIC AVERAGE -->
+
+                            <td>
+                                <?php if ($student['academic_average'] !== null): ?>
+                                    <strong>
+                                        <?= e(
+                                            number_format(
+                                                (float)$student['academic_average'],
+                                                2
+                                            )
+                                        ) ?>
+                                    </strong>
+                                <?php else: ?>
+                                    <span class="text-muted">Not set</span>
+                                <?php endif; ?>
+                            </td>
+
+
+                            <!-- SCHOOL RECOMMENDATIONS -->
+
+                            <td>
+                                <?php if (!empty($student['school_recommendations'])): ?>
+                                    <div class="small" style="min-width: 280px;">
+                                        <?= $student['school_recommendations'] ?>
+                                    </div>
+                                <?php else: ?>
+                                    <span class="text-muted">Not available</span>
+                                <?php endif; ?>
                             </td>
 
 
@@ -988,7 +1088,7 @@ require __DIR__ . '/../includes/header.php';
                         <tr>
 
                             <td
-                                colspan="10"
+                                colspan="12"
                                 class="
                                     text-center
                                     text-muted
