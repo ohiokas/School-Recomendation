@@ -667,7 +667,7 @@ require __DIR__ . '/../includes/header.php';
             <!-- EXPORT EXCEL -->
 
             <a
-                href="<?= e(APP_URL) ?>/admin/student.php?export=excel"
+                href="<?= e(APP_URL) ?>/admin/export_students.php"
                 class="btn btn-success rounded-pill"
             >
 
