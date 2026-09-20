@@ -44,18 +44,6 @@ $title = 'Dashboard'; require __DIR__ . '/includes/header.php';
                 <?php endforeach; ?>
             </div>
         </div>
-
-        <div class="col-lg-4">
-            <div class="panel dark-band">
-                <div class="eyebrow mb-3">Account</div>
-                <h3>Edit Profile</h3>
-                <p class="text-muted">Ubah nama, email, atau password akun kamu.</p>
-                <a href="<?= e(APP_URL) ?>/student/account.php" class="btn btn-accent rounded-pill">
-                    <i class="bi bi-person-gear"></i>
-                    Edit Profile
-                </a>
-            </div>
-
             <div class="panel dark-band mt-4">
                 <div class="eyebrow mb-3">Next step</div>
                 <h3><?= e($steps[array_search($next, array_column($steps, 1))][0] ?? 'Your result') ?></h3>
