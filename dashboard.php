@@ -5,4 +5,65 @@ $user = current_user(); $query = db()->prepare('SELECT s.id, s.domicile, s.educa
 $steps = [['Personal information','student/profile.php',!empty($state['domicile']) && !empty($state['education_preference'])],['Academic scores','student/academic.php',!empty($state['academic_id'])],['Achievements','student/achievements.php',!empty($state['academic_achievement_id']) && !empty($state['non_academic_achievement_id'])],['Organization experience','student/organization.php',!empty($state['organization_id'])],['Interest & passion quiz','student/quiz.php',((int)($state['interest_count'] ?? 0)) >= 8],['Recommendation results','student/recommendation.php',((int)($state['interest_count'] ?? 0)) >= 8]];
 $next = 'student/recommendation.php'; foreach ($steps as $step) { if (!$step[2]) { $next = $step[1]; break; } }
 $title = 'Dashboard'; require __DIR__ . '/includes/header.php';
-?><div class="dashboard-hero"><div class="container"><div class="eyebrow mb-2">Your guided pathway</div><h1 class="section-title">Welcome, <?= e($user['full_name']) ?>.</h1><p class="text-muted">Complete each stage in order. Your final result combines passion signals from the research dataset with your accumulated student score.</p></div></div><div class="container pb-5"><div class="row g-4"><div class="col-lg-8"><div class="panel"><div class="d-flex justify-content-between align-items-center mb-4"><div><div class="eyebrow">Required sequence</div><h4 class="mb-0">From profile to direction</h4></div><span class="badge text-bg-light"><?= count(array_filter($steps, fn($step) => $step[2])) ?> / <?= count($steps) ?> complete</span></div><?php foreach ($steps as $index=>$step): ?><div class="feature d-flex align-items-center gap-3"><i class="bi <?= $step[2] ? 'bi-check-circle-fill' : 'bi-circle' ?>"></i><div class="flex-grow-1"><h6 class="mb-1"><?= $index + 1 ?>. <?= e($step[0]) ?></h6><small class="text-muted"><?= $step[2] ? 'Completed' : ($step[1] === $next ? 'Next step' : 'Locked until the previous step is complete') ?></small></div><a href="<?= APP_URL . '/' . $step[1] ?>" class="btn btn-sm <?= $step[2] || $step[1] === $next ? 'btn-outline-dark' : 'btn-light disabled' ?> rounded-pill"><?= $step[2] ? 'Review' : 'Open' ?></a></div><?php endforeach; ?></div></div><div class="col-lg-4"><div class="panel dark-band"><div class="eyebrow mb-3">Next step</div><h3><?= e($steps[array_search($next, array_column($steps, 1))][0] ?? 'Your result') ?></h3><p class="text-muted">Your result will show your passion focus, dataset signal, academic accumulation, achievements, and school matches.</p><a href="<?= APP_URL . '/' . $next ?>" class="btn btn-accent rounded-pill">Continue <i class="bi bi-arrow-right"></i></a></div></div></div></div><?php require __DIR__ . '/includes/footer.php'; ?>
+?>
+<div class="dashboard-hero">
+    <div class="container">
+        <div class="eyebrow mb-2">Your guided pathway</div>
+        <h1 class="section-title">Welcome, <?= e($user['full_name']) ?>.</h1>
+        <p class="text-muted">Complete each stage in order. Your final result combines passion signals from the research dataset with your accumulated student score.</p>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="panel">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <div class="eyebrow">Required sequence</div>
+                        <h4 class="mb-0">From profile to direction</h4>
+                    </div>
+                    <span class="badge text-bg-light">
+                        <?= count(array_filter($steps, fn($step) => $step[2])) ?> / <?= count($steps) ?> complete
+                    </span>
+                </div>
+
+                <?php foreach ($steps as $index=>$step): ?>
+                    <div class="feature d-flex align-items-center gap-3">
+                        <i class="bi <?= $step[2] ? 'bi-check-circle-fill' : 'bi-circle' ?>"></i>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1"><?= $index + 1 ?>. <?= e($step[0]) ?></h6>
+                            <small class="text-muted">
+                                <?= $step[2] ? 'Completed' : ($step[1] === $next ? 'Next step' : 'Locked until the previous step is complete') ?>
+                            </small>
+                        </div>
+                        <a href="<?= APP_URL . '/' . $step[1] ?>" class="btn btn-sm <?= $step[2] || $step[1] === $next ? 'btn-outline-dark' : 'btn-light disabled' ?> rounded-pill">
+                            <?= $step[2] ? 'Review' : 'Open' ?>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel dark-band">
+                <div class="eyebrow mb-3">Account</div>
+                <h3>Edit Profile</h3>
+                <p class="text-muted">Ubah nama, email, atau password akun kamu.</p>
+                <a href="<?= e(APP_URL) ?>/student/account.php" class="btn btn-accent rounded-pill">
+                    <i class="bi bi-person-gear"></i>
+                    Edit Profile
+                </a>
+            </div>
+
+            <div class="panel dark-band mt-4">
+                <div class="eyebrow mb-3">Next step</div>
+                <h3><?= e($steps[array_search($next, array_column($steps, 1))][0] ?? 'Your result') ?></h3>
+                <p class="text-muted">Your result will show your passion focus, dataset signal, academic accumulation, achievements, and school matches.</p>
+                <a href="<?= APP_URL . '/' . $next ?>" class="btn btn-accent rounded-pill">Continue <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php require __DIR__ . '/includes/footer.php'; ?>
