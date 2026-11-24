@@ -1,0 +1,135 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../config/database.php';
+require_login();
+if ((current_user()['role'] ?? '') !== 'admin') redirect('dashboard.php');
+$source = __DIR__ . '/../SMKSMA404.csv';
+$message = '';
+$preview = [];
+$editing = null;
+
+// Handle CSV import
+if (is_readable($source) && ($handle = fopen($source, 'r'))) {
+    $firstLine = fgets($handle);
+    $delimiter = (substr_count($firstLine, ',') >= substr_count($firstLine, ';')) ? ',' : ';';
+    rewind($handle);
+    $headers = fgetcsv($handle, 0, $delimiter);
+    if (isset($headers[0])) $headers[0] = preg_replace('/^\xEF\xBB\xBF/', '', $headers[0]);
+    while (($row = fgetcsv($handle, 0, $delimiter)) !== false) if (count($row) >= 15) $preview[] = $row;
+    fclose($handle);
+}
+
+// Handle CRUD operations
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && verify_csrf($_POST['csrf'] ?? null)) {
+    $action = $_POST['action'] ?? '';
+
+    if ($action === 'import') {
+        $pdo = db();
+        $pdo->beginTransaction();
+        try {
+            $upsert = $pdo->prepare('INSERT INTO school_data(npsn,name,address,domicile,school_type,average_score,accreditation,source_file) VALUES(?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE name=VALUES(name),address=VALUES(address),domicile=VALUES(domicile),school_type=VALUES(school_type),average_score=VALUES(average_score),accreditation=VALUES(accreditation),source_file=VALUES(source_file),is_active=1');
+            $find = $pdo->prepare('SELECT id FROM school_data WHERE npsn = ?');
+            $clear = $pdo->prepare('DELETE FROM school_competencies WHERE school_id = ?');
+            $competency = $pdo->prepare('INSERT INTO school_competencies(school_id,competency) VALUES(?,?)');
+            foreach ($preview as $row) {
+                $type = stripos(trim($row[1]), 'SMA') === 0 ? 'SMA' : 'SMK';
+                $accreditation = trim($row[16] ?? '') ?: 'N/A';
+                $upsert->execute([$row[0], trim($row[1]), trim($row[2]), trim($row[13]), $type, is_numeric(str_replace(',', '.', trim($row[14]))) ? (float)str_replace(',', '.', trim($row[14])) : null, $accreditation, 'SMKSMA404.csv']);
+                $find->execute([$row[0]]); $schoolId = (int)$find->fetchColumn(); $clear->execute([$schoolId]);
+                foreach (array_slice($row, 3, 10) as $value) if (trim((string)$value) !== '') $competency->execute([$schoolId, trim($value)]);
+            }
+            $pdo->prepare("INSERT INTO datasets(name,file_type,source_path,row_count,status) VALUES('SMKSMA404.csv','CSV',?,?, 'imported')")->execute(['SMKSMA404.csv', count($preview)]);
+            $pdo->commit(); $message = count($preview) . ' schools imported successfully.';
+        } catch (Throwable $exception) { $pdo->rollBack(); $message = 'Import failed: ' . $exception->getMessage(); }
+    }
+
+    elseif ($action === 'add' || $action === 'edit') {
+        try {
+            $npsn = trim($_POST['npsn']);
+            $name = trim($_POST['name']);
+            $address = trim($_POST['address']);
+            $domicile = trim($_POST['domicile']);
+            $schoolType = $_POST['school_type'];
+            $averageScore = is_numeric($_POST['average_score']) ? (float)$_POST['average_score'] : null;
+            $accreditation = trim($_POST['accreditation'] ?? 'N/A');
+            $capacity = is_numeric($_POST['capacity']) ? (int)$_POST['capacity'] : null;
+
+            if ($action === 'add') {
+                $insert = db()->prepare('INSERT INTO school_data(npsn,name,address,domicile,school_type,average_score,accreditation,capacity,source_file) VALUES(?,?,?,?,?,?,?,?,?)');
+                $insert->execute([$npsn, $name, $address, $domicile, $schoolType, $averageScore, $accreditation, $capacity, 'manual']);
+                $schoolId = (int)db()->lastInsertId();
+            } else {
+                $schoolId = (int)$_POST['school_id'];
+                $update = db()->prepare('UPDATE school_data SET npsn=?,name=?,address=?,domicile=?,school_type=?,average_score=?,accreditation=?,capacity=? WHERE id=?');
+                $update->execute([$npsn, $name, $address, $domicile, $schoolType, $averageScore, $accreditation, $capacity, $schoolId]);
+                db()->prepare('DELETE FROM school_competencies WHERE school_id=?')->execute([$schoolId]);
+            }
+
+            // Add competencies
+            if (!empty($_POST['competencies'])) {
+                $compInsert = db()->prepare('INSERT INTO school_competencies(school_id,competency) VALUES(?,?)');
+                foreach ($_POST['competencies'] as $comp) {
+                    if (trim($comp) !== '') $compInsert->execute([$schoolId, trim($comp)]);
+                }
+            }
+
+            $message = 'School ' . ($action === 'add' ? 'added' : 'updated') . ' successfully.';
+        } catch (Throwable $exception) { $message = 'Error: ' . $exception->getMessage(); }
+    }
+
+    elseif ($action === 'delete') {
+        try {
+            $schoolId = (int)$_POST['school_id'];
+            db()->prepare('DELETE FROM school_competencies WHERE school_id=?')->execute([$schoolId]);
+            db()->prepare('DELETE FROM school_data WHERE id=?')->execute([$schoolId]);
+            $message = 'School deleted successfully.';
+        } catch (Throwable $exception) { $message = 'Error: ' . $exception->getMessage(); }
+    }
+
+    elseif ($action === 'edit_form') {
+        $editing = db()->prepare('SELECT * FROM school_data WHERE id=?');
+        $editing->execute([(int)$_POST['school_id']]);
+        $editing = $editing->fetch();
+        $comps = db()->prepare('SELECT competency FROM school_competencies WHERE school_id=?');
+        $comps->execute([(int)$_POST['school_id']]);
+        $editing['competencies'] = $comps->fetchAll(PDO::FETCH_COLUMN);
+    }
+            $payload=schoolPayload($_POST);
+            if($payload[0]===''||$payload[1]===''||$payload[3]==='') throw new RuntimeException('NPSN, nama, dan domisili wajib diisi.');
+            $sql='INSERT INTO school_data(npsn,name,address,domicile,school_type,average_score,capacity,accreditation,admission_prestasi_akademik,admission_prestasi_nonakademik,admission_tahap_kedua,admission_afirmasi,admission_zonasi,source_file) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE name=VALUES(name),address=VALUES(address),domicile=VALUES(domicile),school_type=VALUES(school_type),average_score=VALUES(average_score),capacity=VALUES(capacity),accreditation=VALUES(accreditation),admission_prestasi_akademik=VALUES(admission_prestasi_akademik),admission_prestasi_nonakademik=VALUES(admission_prestasi_nonakademik),admission_tahap_kedua=VALUES(admission_tahap_kedua),admission_afirmasi=VALUES(admission_afirmasi),admission_zonasi=VALUES(admission_zonasi),is_active=1';
+            db()->prepare($sql)->execute(array_merge($payload,['admin']));
+            $message='Data sekolah disimpan.';
+        } elseif($action==='delete'){
+            db()->prepare('UPDATE school_data SET is_active=0 WHERE id=?')->execute([(int)$_POST['id']]); $message='Sekolah dinonaktifkan.';
+        }
+    }catch(Throwable $e){ if(isset($pdo)&&$pdo->inTransaction())$pdo->rollBack(); $error=$e->getMessage(); }
+}
+$edit=null; if(isset($_GET['edit'])){$q=db()->prepare('SELECT * FROM school_data WHERE id=?');$q->execute([(int)$_GET['edit']]);$edit=$q->fetch()?:null;}
+$schools=db()->query('SELECT * FROM school_data WHERE is_active=1 ORDER BY domicile,name')->fetchAll();
+$title='School management'; require __DIR__.'/../includes/header.php';
+?>
+<div class="container py-5">
+<div class="admin-hero mb-4"><div><div class="eyebrow">Admin · school intelligence</div><h1 class="section-title mb-2">Sekolah, jalur, dan kapasitas.</h1><p class="text-muted mb-0">CRUD sekolah berbasis Dataset Project 404. Field yang tidak tersedia di sumber ditandai agar admin bisa melengkapinya.</p></div><div class="admin-hero-mark"><i class="bi bi-buildings"></i></div></div>
+<?php if($message):?><div class="alert alert-success"><?=e($message)?></div><?php endif;?><?php if($error):?><div class="alert alert-danger"><?=e($error)?></div><?php endif;?>
+<div class="row g-4 mb-4">
+<div class="col-lg-8"><div class="panel"><div class="d-flex justify-content-between align-items-center mb-3"><div><div class="eyebrow">Source control</div><h4 class="mb-1">Dataset Project 404</h4><small class="text-muted"><?=count($rows)?> baris sumber · <?=count($schools)?> aktif di database</small></div><form method="post"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input type="hidden" name="action" value="import"><button class="btn btn-accent rounded-pill">Import / sync <i class="bi bi-cloud-arrow-down"></i></button></form></div><div class="progress-track"><span style="width:100%"></span></div><small class="text-muted d-block mt-2">Kompetensi, akreditasi, dan rerata jalur ikut disinkronkan.</small></div></div>
+<div class="col-lg-4"><div class="panel dark-band"><div class="eyebrow">Coverage</div><div class="stat"><?=count($schools)?></div><div class="text-muted">sekolah aktif</div><hr><div class="d-flex justify-content-between"><span>SMK</span><strong><?=count(array_filter($schools,fn($s)=>$s['school_type']==='SMK'))?></strong></div><div class="d-flex justify-content-between"><span>SMA</span><strong><?=count(array_filter($schools,fn($s)=>$s['school_type']==='SMA'))?></strong></div></div></div>
+</div>
+<div class="panel mb-4">
+<div class="d-flex justify-content-between align-items-center mb-3"><div><div class="eyebrow"><?= $edit?'Edit school':'Create / update school'?></div><h4 class="mb-0">School master data</h4></div><?php if($edit):?><a class="btn btn-sm btn-outline-dark rounded-pill" href="schools.php">Cancel edit</a><?php endif;?></div>
+<form method="post"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input type="hidden" name="action" value="save"><div class="row g-3">
+<?php $f=$edit?:[]; ?>
+<div class="col-md-2"><label class="form-label">NPSN</label><input class="form-control" name="npsn" value="<?=e((string)($f['npsn']??''))?>" required></div>
+<div class="col-md-4"><label class="form-label">Nama sekolah</label><input class="form-control" name="name" value="<?=e((string)($f['name']??''))?>" required></div>
+<div class="col-md-3"><label class="form-label">Alamat</label><input class="form-control" name="address" value="<?=e((string)($f['address']??''))?>"></div>
+<div class="col-md-3"><label class="form-label">Domisili</label><input class="form-control" name="domisili" value="<?=e((string)($f['domicile']??''))?>" required></div>
+<div class="col-md-2"><label class="form-label">Tipe</label><select class="form-select" name="school_type"><option <?=($f['school_type']??'')==='SMA'?'selected':''?>>SMA</option><option <?=($f['school_type']??'')==='SMK'?'selected':''?>>SMK</option></select></div>
+<div class="col-md-2"><label class="form-label">Daya tampung</label><input class="form-control" type="number" min="0" name="capacity" value="<?=e((string)($f['capacity']??''))?>"></div>
+<div class="col-md-2"><label class="form-label">Akreditasi</label><input class="form-control" name="accreditation" value="<?=e((string)($f['accreditation']??''))?>"></div>
+<div class="col-md-2"><label class="form-label">Rerata akademik</label><input class="form-control" type="number" step=".01" name="average_score" value="<?=e((string)($f['average_score']??''))?>"></div>
+<?php foreach(['prestasi_akademik'=>'Prestasi akademik','prestasi_nonakademik'=>'Prestasi non-akademik','tahap_kedua'=>'Tahap kedua','afirmasi'=>'Afirmasi','zonasi'=>'Zonasi'] as $key=>$label):?><div class="col-md-2"><label class="form-label"><?=e($label)?></label><input class="form-control" type="number" step=".01" name="<?=$key?>" value="<?=e((string)($f['admission_'.$key]??''))?>"></div><?php endforeach;?>
+</div><button class="btn btn-dark rounded-pill mt-3">Save school</button></form></div>
+<div class="panel table-responsive"><table class="table align-middle"><thead><tr><th>School</th><th>Type</th><th>Location</th><th>Acc.</th><th>Capacity</th><th>Path averages</th><th></th></tr></thead><tbody>
+<?php foreach($schools as $s):?><tr><td><strong><?=e($s['name'])?></strong><br><small class="text-muted"><?=e($s['npsn'])?></small></td><td><span class="badge text-bg-light"><?=e($s['school_type'])?></span></td><td><?=e($s['domicile'])?></td><td><?=e($s['accreditation']?:'—')?></td><td><?=e($s['capacity']!==null?(string)$s['capacity']:'—')?></td><td><small>PA <?=e((string)$s['admission_prestasi_akademik'])?> · NA <?=e((string)$s['admission_prestasi_nonakademik'])?> · A <?=e((string)$s['admission_afirmasi'])?> · Z <?=e((string)$s['admission_zonasi'])?></small></td><td class="text-end"><a class="btn btn-sm btn-outline-dark rounded-pill" href="?edit=<?=$s['id']?>">Edit</a> <form method="post" class="d-inline" onsubmit="return confirm('Nonaktifkan sekolah ini?')"><input type="hidden" name="csrf" value="<?=e(csrf_token())?>"><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="<?=$s['id']?>"><button class="btn btn-sm btn-outline-danger rounded-pill">Delete</button></form></td></tr><?php endforeach;?>
+</tbody></table></div></div>
+<?php require __DIR__.'/../includes/footer.php'; ?>

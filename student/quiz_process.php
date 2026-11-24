@@ -1,0 +1,14 @@
+<?php
+require_once __DIR__ . '/../config/database.php'; require_login();
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !verify_csrf($_POST['csrf'] ?? null)) exit('Invalid request');
+$user = current_user(); $stmt = db()->prepare('SELECT s.id, a.id AS academic_id, o.id AS organization_id, aa.id AS academic_achievement_id, na.id AS non_academic_achievement_id FROM students s LEFT JOIN academic_scores a ON a.student_id=s.id LEFT JOIN organization_scores o ON o.student_id=s.id LEFT JOIN academic_achievements aa ON aa.student_id=s.id LEFT JOIN non_academic_achievements na ON na.student_id=s.id WHERE s.user_id=?'); $stmt->execute([$user['id']]); $student = $stmt->fetch();
+if (!$student) redirect('student/profile.php'); if (!$student['academic_id']) redirect('student/academic.php'); if (!$student['academic_achievement_id'] || !$student['non_academic_achievement_id']) redirect('student/achievements.php'); if (!$student['organization_id']) redirect('student/organization.php');
+$questions = db()->query('SELECT id,indicator,weight FROM quiz_questions WHERE is_active=1')->fetchAll(); $answers = $_POST['answers'] ?? [];
+foreach ($questions as $question) if (!isset($answers[$question['id']])) redirect('student/quiz.php?error=incomplete');
+$canonicalIndicators = ['Linguistic','Musical','Bodily','Logical-Mathematical','Spatial-Visualization','Interpersonal','Intrapersonal','Naturalist'];
+$indicatorAliases = ['logical - mathematical'=>'Logical-Mathematical','logical mathematical'=>'Logical-Mathematical','spatial visualization'=>'Spatial-Visualization','natural'=>'Naturalist','naturalist'=>'Naturalist','nature'=>'Naturalist'];
+$scores = array_fill_keys($canonicalIndicators, 0.0); $counts = array_fill_keys($canonicalIndicators, 0.0); $insert = db()->prepare('INSERT INTO quiz_answers(student_id,question_id,answer) VALUES(?,?,?) ON DUPLICATE KEY UPDATE answer=VALUES(answer)');
+foreach ($questions as $question) { $answer = max(1,min(5,(int)$answers[$question['id']])); $insert->execute([$student['id'],$question['id'],$answer]); $rawIndicator = trim((string)$question['indicator']); $indicator = $indicatorAliases[strtolower($rawIndicator)] ?? $rawIndicator; if (!isset($scores[$indicator])) continue; $scores[$indicator] += $answer * $question['weight']; $counts[$indicator] += 5 * $question['weight']; }
+db()->prepare('DELETE FROM interest_scores WHERE student_id=?')->execute([$student['id']]); $save = db()->prepare('INSERT INTO interest_scores(student_id,indicator,score) VALUES(?,?,?)'); foreach ($canonicalIndicators as $indicator) $save->execute([$student['id'],$indicator,round($scores[$indicator]/max(1,$counts[$indicator])*100,2)]);
+redirect('student/recommendation.php');
+?>

@@ -1,0 +1,4805 @@
+{
+    "model_type": "Gaussian Naive Bayes",
+    "version": "NB-20260904-231656",
+    "dataset": "Dataset Project 404.xlsx",
+    "target": "Job profession",
+    "features": [
+        "Linguistic",
+        "Musical",
+        "Bodily",
+        "Logical - Mathematical",
+        "Spatial-Visualization",
+        "Interpersonal",
+        "Intrapersonal",
+        "Naturalist"
+    ],
+    "metrics": {
+        "accuracy": 0.0278,
+        "precision": 0.0213,
+        "recall": 0.0213,
+        "f1_score": 0.0213,
+        "per_class": {
+            "Actuary": {
+                "true_positive": 0,
+                "false_positive": 3,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Anthropologist": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Archeologist": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Astronomer": {
+                "true_positive": 0,
+                "false_positive": 15,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Banking": {
+                "true_positive": 20,
+                "false_positive": 0,
+                "false_negative": 0,
+                "precision": 1,
+                "recall": 1,
+                "f1_score": 1
+            },
+            "Broadcaster": {
+                "true_positive": 0,
+                "false_positive": 65,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Business Analyst": {
+                "true_positive": 0,
+                "false_positive": 23,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Business manager": {
+                "true_positive": 0,
+                "false_positive": 36,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Chief financial officer": {
+                "true_positive": 0,
+                "false_positive": 4,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Company secretary": {
+                "true_positive": 0,
+                "false_positive": 28,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Consultant": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Counselor": {
+                "true_positive": 0,
+                "false_positive": 2,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Criminologist": {
+                "true_positive": 0,
+                "false_positive": 83,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Dancer": {
+                "true_positive": 0,
+                "false_positive": 10,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Economist": {
+                "true_positive": 0,
+                "false_positive": 32,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Engineer": {
+                "true_positive": 0,
+                "false_positive": 34,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Financial Advisor": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Geologist": {
+                "true_positive": 0,
+                "false_positive": 27,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Graphic Designer": {
+                "true_positive": 0,
+                "false_positive": 10,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Historian": {
+                "true_positive": 0,
+                "false_positive": 9,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Interior Decorator": {
+                "true_positive": 0,
+                "false_positive": 1,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Internal auditor": {
+                "true_positive": 0,
+                "false_positive": 15,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Lawyer": {
+                "true_positive": 0,
+                "false_positive": 6,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Leader": {
+                "true_positive": 0,
+                "false_positive": 38,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Librarian": {
+                "true_positive": 0,
+                "false_positive": 1,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Logistics manager": {
+                "true_positive": 0,
+                "false_positive": 11,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Marketing": {
+                "true_positive": 0,
+                "false_positive": 25,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Mechanic": {
+                "true_positive": 0,
+                "false_positive": 76,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Medical": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Middle, Higher School Teacher and Professors": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Militry": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Nature photographer": {
+                "true_positive": 0,
+                "false_positive": 2,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Pharmacist": {
+                "true_positive": 0,
+                "false_positive": 52,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Philosopher": {
+                "true_positive": 0,
+                "false_positive": 1,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Physician": {
+                "true_positive": 0,
+                "false_positive": 28,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Physicist": {
+                "true_positive": 0,
+                "false_positive": 17,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Poet": {
+                "true_positive": 0,
+                "false_positive": 25,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Police Force (Spies, CBI officials, CID, Detectives)": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Politician": {
+                "true_positive": 0,
+                "false_positive": 14,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Pre Primary Teacher (2020 NEP and Mental Health)": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Primary Teacher": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Psychologist": {
+                "true_positive": 0,
+                "false_positive": 4,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Stock Broker": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Technician": {
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 50,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            },
+            "Veterinarian": {
+                "true_positive": 0,
+                "false_positive": 3,
+                "false_negative": 0,
+                "precision": 0,
+                "recall": 0,
+                "f1_score": 0
+            }
+        },
+        "confusion_matrix": {
+            "Actuary": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Anthropologist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 5,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 34,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 10,
+                "Historian": 0,
+                "Interior Decorator": 1,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Archeologist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 10,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 27,
+                "Graphic Designer": 0,
+                "Historian": 9,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 2,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 2
+            },
+            "Astronomer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Banking": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 20,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Broadcaster": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Business Analyst": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Business manager": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Chief financial officer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Company secretary": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Consultant": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 7,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 14,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 6,
+                "Lawyer": 0,
+                "Leader": 11,
+                "Librarian": 0,
+                "Logistics manager": 5,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 1,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 2,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 4,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Counselor": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Criminologist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Dancer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Economist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Engineer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Financial Advisor": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 22,
+                "Chief financial officer": 0,
+                "Company secretary": 26,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 2,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Geologist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Graphic Designer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Historian": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Interior Decorator": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Internal auditor": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Lawyer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Leader": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Librarian": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Logistics manager": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Marketing": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Mechanic": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Medical": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 2,
+                "Criminologist": 1,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 46,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 1
+            },
+            "Middle, Higher School Teacher and Professors": {
+                "Actuary": 3,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 18,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 1,
+                "Leader": 21,
+                "Librarian": 0,
+                "Logistics manager": 4,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 1,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 2,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Militry": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 25,
+                "Dancer": 1,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 15,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 9,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Nature photographer": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 11,
+                "Business Analyst": 0,
+                "Business manager": 14,
+                "Chief financial officer": 0,
+                "Company secretary": 2,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 22,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 1,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 18,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 26,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 6,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Pharmacist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Philosopher": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Physician": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Physicist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Poet": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Police Force (Spies, CBI officials, CID, Detectives)": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 16,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 23,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 11,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Politician": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Pre Primary Teacher (2020 NEP and Mental Health)": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 47,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 3,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Primary Teacher": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 7,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 2,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 16,
+                "Poet": 25,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Psychologist": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Stock Broker": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 16,
+                "Business manager": 0,
+                "Chief financial officer": 4,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 9,
+                "Lawyer": 5,
+                "Leader": 6,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 10,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Technician": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 23,
+                "Dancer": 7,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 1,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 12,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 6,
+                "Philosopher": 0,
+                "Physician": 1,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            },
+            "Veterinarian": {
+                "Actuary": 0,
+                "Anthropologist": 0,
+                "Archeologist": 0,
+                "Astronomer": 0,
+                "Banking": 0,
+                "Broadcaster": 0,
+                "Business Analyst": 0,
+                "Business manager": 0,
+                "Chief financial officer": 0,
+                "Company secretary": 0,
+                "Consultant": 0,
+                "Counselor": 0,
+                "Criminologist": 0,
+                "Dancer": 0,
+                "Economist": 0,
+                "Engineer": 0,
+                "Financial Advisor": 0,
+                "Geologist": 0,
+                "Graphic Designer": 0,
+                "Historian": 0,
+                "Interior Decorator": 0,
+                "Internal auditor": 0,
+                "Lawyer": 0,
+                "Leader": 0,
+                "Librarian": 0,
+                "Logistics manager": 0,
+                "Marketing": 0,
+                "Mechanic": 0,
+                "Medical": 0,
+                "Middle, Higher School Teacher and Professors": 0,
+                "Militry": 0,
+                "Nature photographer": 0,
+                "Para Medical (physiotherapy, occupational theropy, audio and speech language theropy, nursing)": 0,
+                "Para Militry (https:\/\/en.wikipedia.org\/wiki\/Paramilitary_forces_of_India)": 0,
+                "Pharmacist": 0,
+                "Philosopher": 0,
+                "Physician": 0,
+                "Physicist": 0,
+                "Poet": 0,
+                "Police Force (Spies, CBI officials, CID, Detectives)": 0,
+                "Politician": 0,
+                "Pre Primary Teacher (2020 NEP and Mental Health)": 0,
+                "Primary Teacher": 0,
+                "Psychologist": 0,
+                "Stock Broker": 0,
+                "Technician": 0,
+                "Veterinarian": 0
+            }
+        },
+        "evaluated_records": 720,
+        "rows": 3600,
+        "train": 2880,
+        "test": 720
+    },
+    "model": {
+        "classes": [
+            "Astronomer",
+            "Geologist",
+            "Marine Biologist",
+            "Veterinarian",
+            "Nature photographer",
+            "Recording engineer",
+            "Audiologist",
+            "Sound editor",
+            "Music teacher",
+            "Actuary",
+            "Chartered Accountant",
+            "Computer analyst",
+            "Computer programmer",
+            "Database designer",
+            "Economist",
+            "Librarian",
+            "Engineer",
+            "Lawyer",
+            "Pharmacist",
+            "Physician",
+            "Physicist",
+            "Mathematician",
+            "Leader",
+            "Manager",
+            "Politician",
+            "Social Worker",
+            "Receptionist",
+            "Sales Representative",
+            "Counselor",
+            "Athlete",
+            "Dancer",
+            "Mechanic",
+            "Actor \/ Actress",
+            "Physical Therapist",
+            "Editor",
+            "Historian",
+            "Journalist",
+            "Language Teacher",
+            "Poet",
+            "Broadcaster",
+            "Artist",
+            "Graphic Designer",
+            "Fashion Designer",
+            "Interior Decorator",
+            "Pilot",
+            "Psychologist",
+            "Philosopher",
+            "Writer",
+            "Criminologist",
+            "Company secretary",
+            "Marketing",
+            "Logistics manager",
+            "Research analyst",
+            "Business manager",
+            "Internal auditor",
+            "Chief financial officer",
+            "Business Analyst",
+            "Banking"
+        ],
+        "stats": {
+            "Astronomer": {
+                "Linguistic": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000017
+                },
+                "Musical": {
+                    "mean": 6.86,
+                    "variance": 1.8403999999999991
+                },
+                "Bodily": {
+                    "mean": 12.6,
+                    "variance": 1.2400000000000007
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.2,
+                    "variance": 2.360000000000003
+                },
+                "Spatial-Visualization": {
+                    "mean": 17.2,
+                    "variance": 2.800000000000003
+                },
+                "Interpersonal": {
+                    "mean": 12.06,
+                    "variance": 0.6563999999999995
+                },
+                "Intrapersonal": {
+                    "mean": 17.48,
+                    "variance": 2.089599999999999
+                },
+                "Naturalist": {
+                    "mean": 18.3,
+                    "variance": 3.2100000000000004
+                }
+            },
+            "Geologist": {
+                "Linguistic": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000017
+                },
+                "Musical": {
+                    "mean": 7.14,
+                    "variance": 1.760399999999999
+                },
+                "Bodily": {
+                    "mean": 17.34,
+                    "variance": 2.144399999999999
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.84,
+                    "variance": 2.2144000000000004
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.54,
+                    "variance": 1.1284000000000014
+                },
+                "Interpersonal": {
+                    "mean": 7.2,
+                    "variance": 1.8000000000000003
+                },
+                "Intrapersonal": {
+                    "mean": 12.52,
+                    "variance": 1.3696000000000004
+                },
+                "Naturalist": {
+                    "mean": 18.34,
+                    "variance": 1.5843999999999994
+                }
+            },
+            "Marine Biologist": {
+                "Linguistic": {
+                    "mean": 7.7,
+                    "variance": 1.81
+                },
+                "Musical": {
+                    "mean": 7.06,
+                    "variance": 1.8964
+                },
+                "Bodily": {
+                    "mean": 12.4,
+                    "variance": 1.0400000000000003
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.96,
+                    "variance": 0.9583999999999997
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.24,
+                    "variance": 1.0224000000000002
+                },
+                "Interpersonal": {
+                    "mean": 7.84,
+                    "variance": 2.0943999999999994
+                },
+                "Intrapersonal": {
+                    "mean": 12.46,
+                    "variance": 1.1284000000000012
+                },
+                "Naturalist": {
+                    "mean": 17.92,
+                    "variance": 1.4735999999999998
+                }
+            },
+            "Veterinarian": {
+                "Linguistic": {
+                    "mean": 12.02,
+                    "variance": 1.1395999999999993
+                },
+                "Musical": {
+                    "mean": 7.28,
+                    "variance": 1.6416000000000006
+                },
+                "Bodily": {
+                    "mean": 12.32,
+                    "variance": 1.4176000000000013
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.44,
+                    "variance": 1.0463999999999993
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.42,
+                    "variance": 1.2036000000000002
+                },
+                "Interpersonal": {
+                    "mean": 17.46,
+                    "variance": 2.9284000000000017
+                },
+                "Intrapersonal": {
+                    "mean": 17.98,
+                    "variance": 0.49960000000000016
+                },
+                "Naturalist": {
+                    "mean": 17.78,
+                    "variance": 0.6116000000000001
+                }
+            },
+            "Nature photographer": {
+                "Linguistic": {
+                    "mean": 12.38,
+                    "variance": 1.1155999999999997
+                },
+                "Musical": {
+                    "mean": 6.94,
+                    "variance": 1.8564
+                },
+                "Bodily": {
+                    "mean": 17.5,
+                    "variance": 2.81
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.66,
+                    "variance": 2.6243999999999996
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.24,
+                    "variance": 1.5024000000000004
+                },
+                "Interpersonal": {
+                    "mean": 12.34,
+                    "variance": 1.1844000000000003
+                },
+                "Intrapersonal": {
+                    "mean": 18.02,
+                    "variance": 0.7795999999999992
+                },
+                "Naturalist": {
+                    "mean": 18.12,
+                    "variance": 2.6655999999999995
+                }
+            },
+            "Recording engineer": {
+                "Linguistic": {
+                    "mean": 12.06,
+                    "variance": 0.8163999999999997
+                },
+                "Musical": {
+                    "mean": 17.5,
+                    "variance": 1.73
+                },
+                "Bodily": {
+                    "mean": 7.76,
+                    "variance": 3.1423999999999976
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.18,
+                    "variance": 1.1476000000000004
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.12,
+                    "variance": 2.1056
+                },
+                "Interpersonal": {
+                    "mean": 18.34,
+                    "variance": 1.4644000000000004
+                },
+                "Intrapersonal": {
+                    "mean": 12.56,
+                    "variance": 1.0463999999999996
+                },
+                "Naturalist": {
+                    "mean": 7.24,
+                    "variance": 1.7423999999999995
+                }
+            },
+            "Audiologist": {
+                "Linguistic": {
+                    "mean": 17.32,
+                    "variance": 2.8176000000000014
+                },
+                "Musical": {
+                    "mean": 12.48,
+                    "variance": 1.1696000000000009
+                },
+                "Bodily": {
+                    "mean": 6.92,
+                    "variance": 1.4335999999999998
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.6,
+                    "variance": 3.040000000000002
+                },
+                "Spatial-Visualization": {
+                    "mean": 8.64,
+                    "variance": 1.1103999999999996
+                },
+                "Interpersonal": {
+                    "mean": 18.46,
+                    "variance": 3.4484000000000026
+                },
+                "Intrapersonal": {
+                    "mean": 12.26,
+                    "variance": 0.7923999999999993
+                },
+                "Naturalist": {
+                    "mean": 11.88,
+                    "variance": 1.2655999999999994
+                }
+            },
+            "Sound editor": {
+                "Linguistic": {
+                    "mean": 12.7,
+                    "variance": 0.8900000000000007
+                },
+                "Musical": {
+                    "mean": 17.1,
+                    "variance": 3.6500000000000004
+                },
+                "Bodily": {
+                    "mean": 7.44,
+                    "variance": 2.886400000000001
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.48,
+                    "variance": 2.6496000000000004
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.32,
+                    "variance": 2.857600000000001
+                },
+                "Interpersonal": {
+                    "mean": 12.68,
+                    "variance": 0.7776
+                },
+                "Intrapersonal": {
+                    "mean": 13.5,
+                    "variance": 0.25
+                },
+                "Naturalist": {
+                    "mean": 18.4,
+                    "variance": 1.0399999999999996
+                }
+            },
+            "Music teacher": {
+                "Linguistic": {
+                    "mean": 17.92,
+                    "variance": 2.7936
+                },
+                "Musical": {
+                    "mean": 18.72,
+                    "variance": 1.3616000000000008
+                },
+                "Bodily": {
+                    "mean": 12.54,
+                    "variance": 1.2484000000000017
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.42,
+                    "variance": 2.7235999999999994
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.6,
+                    "variance": 3.4400000000000004
+                },
+                "Interpersonal": {
+                    "mean": 18.74,
+                    "variance": 0.7124000000000003
+                },
+                "Intrapersonal": {
+                    "mean": 12.48,
+                    "variance": 1.2496000000000012
+                },
+                "Naturalist": {
+                    "mean": 12.52,
+                    "variance": 1.2496000000000012
+                }
+            },
+            "Actuary": {
+                "Linguistic": {
+                    "mean": 12.34,
+                    "variance": 1.2644000000000006
+                },
+                "Musical": {
+                    "mean": 18.48,
+                    "variance": 1.1696000000000004
+                },
+                "Bodily": {
+                    "mean": 12.54,
+                    "variance": 1.2484000000000017
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.5,
+                    "variance": 1.01
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.42,
+                    "variance": 2.7235999999999994
+                },
+                "Interpersonal": {
+                    "mean": 18,
+                    "variance": 1.44
+                },
+                "Intrapersonal": {
+                    "mean": 18.4,
+                    "variance": 1.1599999999999995
+                },
+                "Naturalist": {
+                    "mean": 7.42,
+                    "variance": 2.7235999999999994
+                }
+            },
+            "Chartered Accountant": {
+                "Linguistic": {
+                    "mean": 12.74,
+                    "variance": 1.0724000000000002
+                },
+                "Musical": {
+                    "mean": 7.42,
+                    "variance": 2.7235999999999994
+                },
+                "Bodily": {
+                    "mean": 12.7,
+                    "variance": 1.2100000000000013
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.64,
+                    "variance": 2.8303999999999987
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.3,
+                    "variance": 0.8900000000000006
+                },
+                "Interpersonal": {
+                    "mean": 17.48,
+                    "variance": 1.2496000000000012
+                },
+                "Intrapersonal": {
+                    "mean": 12.5,
+                    "variance": 0.25
+                },
+                "Naturalist": {
+                    "mean": 5.56,
+                    "variance": 0.3263999999999998
+                }
+            },
+            "Computer analyst": {
+                "Linguistic": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Musical": {
+                    "mean": 7.02,
+                    "variance": 2.2596000000000007
+                },
+                "Bodily": {
+                    "mean": 12.74,
+                    "variance": 1.0724000000000002
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.08,
+                    "variance": 0.6735999999999995
+                },
+                "Interpersonal": {
+                    "mean": 12.46,
+                    "variance": 1.248400000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.52,
+                    "variance": 2.9696
+                },
+                "Naturalist": {
+                    "mean": 5.66,
+                    "variance": 0.3844000000000002
+                }
+            },
+            "Computer programmer": {
+                "Linguistic": {
+                    "mean": 17.58,
+                    "variance": 2.5635999999999997
+                },
+                "Musical": {
+                    "mean": 5.58,
+                    "variance": 0.4035999999999998
+                },
+                "Bodily": {
+                    "mean": 8,
+                    "variance": 2.6
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 7,
+                    "variance": 2
+                },
+                "Interpersonal": {
+                    "mean": 12.24,
+                    "variance": 0.6624000000000002
+                },
+                "Intrapersonal": {
+                    "mean": 12.3,
+                    "variance": 1.210000000000001
+                },
+                "Naturalist": {
+                    "mean": 7.54,
+                    "variance": 2.8484000000000003
+                }
+            },
+            "Database designer": {
+                "Linguistic": {
+                    "mean": 12.12,
+                    "variance": 0.8255999999999996
+                },
+                "Musical": {
+                    "mean": 7.58,
+                    "variance": 2.9636
+                },
+                "Bodily": {
+                    "mean": 7.32,
+                    "variance": 3.297599999999999
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.42,
+                    "variance": 2.9635999999999996
+                },
+                "Spatial-Visualization": {
+                    "mean": 8.16,
+                    "variance": 0.49440000000000045
+                },
+                "Interpersonal": {
+                    "mean": 16.54,
+                    "variance": 2.4884000000000026
+                },
+                "Intrapersonal": {
+                    "mean": 6.38,
+                    "variance": 1.2356000000000003
+                },
+                "Naturalist": {
+                    "mean": 14,
+                    "variance": 1.0e-9
+                }
+            },
+            "Economist": {
+                "Linguistic": {
+                    "mean": 12.3,
+                    "variance": 1.2100000000000013
+                },
+                "Musical": {
+                    "mean": 12,
+                    "variance": 0.8
+                },
+                "Bodily": {
+                    "mean": 7.44,
+                    "variance": 2.9264000000000006
+                },
+                "Logical - Mathematical": {
+                    "mean": 16.26,
+                    "variance": 1.5123999999999993
+                },
+                "Spatial-Visualization": {
+                    "mean": 5.8,
+                    "variance": 0.7200000000000002
+                },
+                "Interpersonal": {
+                    "mean": 17.4,
+                    "variance": 3.4399999999999995
+                },
+                "Intrapersonal": {
+                    "mean": 16.74,
+                    "variance": 2.7524000000000006
+                },
+                "Naturalist": {
+                    "mean": 7.56,
+                    "variance": 2.9264000000000006
+                }
+            },
+            "Librarian": {
+                "Linguistic": {
+                    "mean": 12.34,
+                    "variance": 1.0244000000000006
+                },
+                "Musical": {
+                    "mean": 7.12,
+                    "variance": 3.3056
+                },
+                "Bodily": {
+                    "mean": 17.4,
+                    "variance": 3.4399999999999995
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.4,
+                    "variance": 3.44
+                },
+                "Spatial-Visualization": {
+                    "mean": 11.96,
+                    "variance": 0.6784000000000002
+                },
+                "Interpersonal": {
+                    "mean": 13.04,
+                    "variance": 0.5983999999999999
+                },
+                "Intrapersonal": {
+                    "mean": 16.78,
+                    "variance": 0.49160000000000004
+                },
+                "Naturalist": {
+                    "mean": 8.14,
+                    "variance": 3.0003999999999973
+                }
+            },
+            "Engineer": {
+                "Linguistic": {
+                    "mean": 12.32,
+                    "variance": 1.0976000000000008
+                },
+                "Musical": {
+                    "mean": 6.94,
+                    "variance": 2.4964
+                },
+                "Bodily": {
+                    "mean": 7.14,
+                    "variance": 1.6403999999999996
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.5,
+                    "variance": 2.65
+                },
+                "Spatial-Visualization": {
+                    "mean": 18.94,
+                    "variance": 1.6163999999999998
+                },
+                "Interpersonal": {
+                    "mean": 12.36,
+                    "variance": 0.9503999999999994
+                },
+                "Intrapersonal": {
+                    "mean": 18.9,
+                    "variance": 2.690000000000002
+                },
+                "Naturalist": {
+                    "mean": 7.48,
+                    "variance": 2.1296000000000017
+                }
+            },
+            "Lawyer": {
+                "Linguistic": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Musical": {
+                    "mean": 5.88,
+                    "variance": 1.145599999999999
+                },
+                "Bodily": {
+                    "mean": 12.8,
+                    "variance": 1.1199999999999997
+                },
+                "Logical - Mathematical": {
+                    "mean": 19,
+                    "variance": 1.0e-9
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.84,
+                    "variance": 1.5344000000000007
+                },
+                "Interpersonal": {
+                    "mean": 16.44,
+                    "variance": 1.4464
+                },
+                "Intrapersonal": {
+                    "mean": 16,
+                    "variance": 1.0e-9
+                },
+                "Naturalist": {
+                    "mean": 7.2,
+                    "variance": 1.840000000000002
+                }
+            },
+            "Pharmacist": {
+                "Linguistic": {
+                    "mean": 12.44,
+                    "variance": 1.1263999999999994
+                },
+                "Musical": {
+                    "mean": 8,
+                    "variance": 2
+                },
+                "Bodily": {
+                    "mean": 17.48,
+                    "variance": 2.9695999999999994
+                },
+                "Logical - Mathematical": {
+                    "mean": 11.9,
+                    "variance": 0.7700000000000007
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.48,
+                    "variance": 2.4895999999999994
+                },
+                "Interpersonal": {
+                    "mean": 19.38,
+                    "variance": 0.5956
+                },
+                "Intrapersonal": {
+                    "mean": 12.88,
+                    "variance": 0.7055999999999993
+                },
+                "Naturalist": {
+                    "mean": 17.62,
+                    "variance": 2.5556000000000005
+                }
+            },
+            "Physician": {
+                "Linguistic": {
+                    "mean": 12.54,
+                    "variance": 1.2484000000000015
+                },
+                "Musical": {
+                    "mean": 6.48,
+                    "variance": 3.2896000000000005
+                },
+                "Bodily": {
+                    "mean": 17.18,
+                    "variance": 0.6275999999999994
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.5,
+                    "variance": 2.81
+                },
+                "Spatial-Visualization": {
+                    "mean": 7,
+                    "variance": 2
+                },
+                "Interpersonal": {
+                    "mean": 19.38,
+                    "variance": 0.5956
+                },
+                "Intrapersonal": {
+                    "mean": 12.44,
+                    "variance": 1.1263999999999994
+                },
+                "Naturalist": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                }
+            },
+            "Physicist": {
+                "Linguistic": {
+                    "mean": 12.62,
+                    "variance": 1.1955999999999993
+                },
+                "Musical": {
+                    "mean": 17.52,
+                    "variance": 1.2096000000000011
+                },
+                "Bodily": {
+                    "mean": 12.48,
+                    "variance": 1.8496000000000001
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.78,
+                    "variance": 1.491600000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 7,
+                    "variance": 2
+                },
+                "Interpersonal": {
+                    "mean": 12.34,
+                    "variance": 1.0244000000000006
+                },
+                "Intrapersonal": {
+                    "mean": 17,
+                    "variance": 2
+                },
+                "Naturalist": {
+                    "mean": 7.78,
+                    "variance": 2.2516000000000007
+                }
+            },
+            "Mathematician": {
+                "Linguistic": {
+                    "mean": 12.72,
+                    "variance": 1.0815999999999995
+                },
+                "Musical": {
+                    "mean": 6.94,
+                    "variance": 3.6163999999999987
+                },
+                "Bodily": {
+                    "mean": 7.72,
+                    "variance": 1.6416000000000006
+                },
+                "Logical - Mathematical": {
+                    "mean": 16.66,
+                    "variance": 1.0244000000000004
+                },
+                "Spatial-Visualization": {
+                    "mean": 18.72,
+                    "variance": 0.6015999999999999
+                },
+                "Interpersonal": {
+                    "mean": 12.38,
+                    "variance": 1.0355999999999996
+                },
+                "Intrapersonal": {
+                    "mean": 7,
+                    "variance": 2
+                },
+                "Naturalist": {
+                    "mean": 7.68,
+                    "variance": 2.4176000000000015
+                }
+            },
+            "Leader": {
+                "Linguistic": {
+                    "mean": 12.18,
+                    "variance": 1.1076000000000008
+                },
+                "Musical": {
+                    "mean": 6.92,
+                    "variance": 2.673600000000001
+                },
+                "Bodily": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.22,
+                    "variance": 2.7316000000000003
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.94,
+                    "variance": 1.3363999999999996
+                },
+                "Interpersonal": {
+                    "mean": 17.1,
+                    "variance": 2.090000000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.78,
+                    "variance": 1.0116000000000007
+                },
+                "Naturalist": {
+                    "mean": 7.94,
+                    "variance": 2.0964
+                }
+            },
+            "Manager": {
+                "Linguistic": {
+                    "mean": 12.18,
+                    "variance": 1.1076000000000008
+                },
+                "Musical": {
+                    "mean": 7.28,
+                    "variance": 1.8416000000000006
+                },
+                "Bodily": {
+                    "mean": 13.14,
+                    "variance": 0.6004000000000003
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.58,
+                    "variance": 2.9635999999999996
+                },
+                "Spatial-Visualization": {
+                    "mean": 16.56,
+                    "variance": 1.5664000000000007
+                },
+                "Interpersonal": {
+                    "mean": 16.24,
+                    "variance": 1.342400000000001
+                },
+                "Intrapersonal": {
+                    "mean": 16.58,
+                    "variance": 1.3635999999999995
+                },
+                "Naturalist": {
+                    "mean": 6.96,
+                    "variance": 1.9583999999999993
+                }
+            },
+            "Politician": {
+                "Linguistic": {
+                    "mean": 13.14,
+                    "variance": 0.6004000000000003
+                },
+                "Musical": {
+                    "mean": 7.48,
+                    "variance": 2.8096000000000005
+                },
+                "Bodily": {
+                    "mean": 12.14,
+                    "variance": 0.8403999999999988
+                },
+                "Logical - Mathematical": {
+                    "mean": 19,
+                    "variance": 1.0e-9
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.18,
+                    "variance": 2.387599999999998
+                },
+                "Interpersonal": {
+                    "mean": 17.1,
+                    "variance": 2.090000000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.36,
+                    "variance": 0.9103999999999999
+                },
+                "Naturalist": {
+                    "mean": 5.48,
+                    "variance": 0.24960000000000007
+                }
+            },
+            "Social Worker": {
+                "Linguistic": {
+                    "mean": 11.74,
+                    "variance": 0.9124000000000002
+                },
+                "Musical": {
+                    "mean": 6.96,
+                    "variance": 3.0383999999999998
+                },
+                "Bodily": {
+                    "mean": 19.06,
+                    "variance": 2.8564
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.62,
+                    "variance": 1.7556000000000003
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.88,
+                    "variance": 0.9055999999999993
+                },
+                "Interpersonal": {
+                    "mean": 18.02,
+                    "variance": 1.4595999999999998
+                },
+                "Intrapersonal": {
+                    "mean": 17.8,
+                    "variance": 0.31999999999999973
+                },
+                "Naturalist": {
+                    "mean": 7.58,
+                    "variance": 1.4436000000000004
+                }
+            },
+            "Receptionist": {
+                "Linguistic": {
+                    "mean": 17.36,
+                    "variance": 3.630400000000002
+                },
+                "Musical": {
+                    "mean": 16.96,
+                    "variance": 1.3984000000000003
+                },
+                "Bodily": {
+                    "mean": 11.8,
+                    "variance": 0.16000000000000014
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.74,
+                    "variance": 1.0724
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.52,
+                    "variance": 1.8495999999999997
+                },
+                "Interpersonal": {
+                    "mean": 19.8,
+                    "variance": 0.16000000000000014
+                },
+                "Intrapersonal": {
+                    "mean": 12.08,
+                    "variance": 0.7936000000000001
+                },
+                "Naturalist": {
+                    "mean": 6.2,
+                    "variance": 0.15999999999999998
+                }
+            },
+            "Sales Representative": {
+                "Linguistic": {
+                    "mean": 17.28,
+                    "variance": 2.681600000000001
+                },
+                "Musical": {
+                    "mean": 5.54,
+                    "variance": 0.6483999999999999
+                },
+                "Bodily": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.92,
+                    "variance": 3.673600000000002
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.22,
+                    "variance": 0.5315999999999996
+                },
+                "Interpersonal": {
+                    "mean": 17.72,
+                    "variance": 0.20159999999999997
+                },
+                "Intrapersonal": {
+                    "mean": 11.22,
+                    "variance": 0.17159999999999997
+                },
+                "Naturalist": {
+                    "mean": 7.32,
+                    "variance": 1.9776000000000018
+                }
+            },
+            "Counselor": {
+                "Linguistic": {
+                    "mean": 12.4,
+                    "variance": 1.1200000000000003
+                },
+                "Musical": {
+                    "mean": 6.54,
+                    "variance": 1.5284000000000006
+                },
+                "Bodily": {
+                    "mean": 13.28,
+                    "variance": 0.9215999999999996
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.72,
+                    "variance": 3.041599999999999
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.38,
+                    "variance": 1.5955999999999997
+                },
+                "Interpersonal": {
+                    "mean": 17.22,
+                    "variance": 2.051600000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.6,
+                    "variance": 1.919999999999999
+                },
+                "Naturalist": {
+                    "mean": 12.6,
+                    "variance": 1.2400000000000007
+                }
+            },
+            "Athlete": {
+                "Linguistic": {
+                    "mean": 12.08,
+                    "variance": 1.0736000000000008
+                },
+                "Musical": {
+                    "mean": 12.2,
+                    "variance": 2.1600000000000015
+                },
+                "Bodily": {
+                    "mean": 17.64,
+                    "variance": 2.390399999999998
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.16,
+                    "variance": 2.374400000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.32,
+                    "variance": 1.7376000000000014
+                },
+                "Interpersonal": {
+                    "mean": 17.08,
+                    "variance": 2.5535999999999994
+                },
+                "Intrapersonal": {
+                    "mean": 17.72,
+                    "variance": 1.921600000000001
+                },
+                "Naturalist": {
+                    "mean": 12.46,
+                    "variance": 0.9684000000000011
+                }
+            },
+            "Dancer": {
+                "Linguistic": {
+                    "mean": 7.46,
+                    "variance": 2.8484000000000003
+                },
+                "Musical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Bodily": {
+                    "mean": 16.72,
+                    "variance": 1.0016000000000012
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.6,
+                    "variance": 3.240000000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.38,
+                    "variance": 0.9155999999999996
+                },
+                "Interpersonal": {
+                    "mean": 14.88,
+                    "variance": 22.825600000000037
+                },
+                "Intrapersonal": {
+                    "mean": 12.38,
+                    "variance": 0.9155999999999996
+                },
+                "Naturalist": {
+                    "mean": 12.44,
+                    "variance": 0.9263999999999997
+                }
+            },
+            "Mechanic": {
+                "Linguistic": {
+                    "mean": 7.54,
+                    "variance": 2.6884
+                },
+                "Musical": {
+                    "mean": 7.52,
+                    "variance": 1.5696000000000003
+                },
+                "Bodily": {
+                    "mean": 17.98,
+                    "variance": 1.2995999999999994
+                },
+                "Logical - Mathematical": {
+                    "mean": 16.72,
+                    "variance": 1.081600000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.38,
+                    "variance": 0.9155999999999996
+                },
+                "Interpersonal": {
+                    "mean": 12.82,
+                    "variance": 1.0675999999999997
+                },
+                "Intrapersonal": {
+                    "mean": 7.1,
+                    "variance": 2.49
+                },
+                "Naturalist": {
+                    "mean": 12.62,
+                    "variance": 1.155599999999999
+                }
+            },
+            "Actor \/ Actress": {
+                "Linguistic": {
+                    "mean": 17.94,
+                    "variance": 2.496400000000001
+                },
+                "Musical": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Bodily": {
+                    "mean": 17.4,
+                    "variance": 2.399999999999998
+                },
+                "Logical - Mathematical": {
+                    "mean": 6.94,
+                    "variance": 1.9364000000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.26,
+                    "variance": 1.0724000000000002
+                },
+                "Interpersonal": {
+                    "mean": 17.6,
+                    "variance": 2.439999999999999
+                },
+                "Intrapersonal": {
+                    "mean": 17.08,
+                    "variance": 3.0336000000000003
+                },
+                "Naturalist": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000015
+                }
+            },
+            "Physical Therapist": {
+                "Linguistic": {
+                    "mean": 7.58,
+                    "variance": 1.9635999999999998
+                },
+                "Musical": {
+                    "mean": 7.52,
+                    "variance": 1.369600000000001
+                },
+                "Bodily": {
+                    "mean": 17.3,
+                    "variance": 2.130000000000001
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000015
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.5,
+                    "variance": 1.01
+                },
+                "Interpersonal": {
+                    "mean": 7.84,
+                    "variance": 1.7343999999999995
+                },
+                "Intrapersonal": {
+                    "mean": 12.78,
+                    "variance": 0.6516000000000004
+                },
+                "Naturalist": {
+                    "mean": 18.4,
+                    "variance": 0.23999999999999994
+                }
+            },
+            "Editor": {
+                "Linguistic": {
+                    "mean": 7.74,
+                    "variance": 1.9524000000000004
+                },
+                "Musical": {
+                    "mean": 17.88,
+                    "variance": 3.0656
+                },
+                "Bodily": {
+                    "mean": 7.46,
+                    "variance": 2.8084000000000007
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.98,
+                    "variance": 1.0195999999999996
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.94,
+                    "variance": 1.9763999999999984
+                },
+                "Interpersonal": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000015
+                },
+                "Intrapersonal": {
+                    "mean": 17.5,
+                    "variance": 2.25
+                },
+                "Naturalist": {
+                    "mean": 12.4,
+                    "variance": 1.3600000000000008
+                }
+            },
+            "Historian": {
+                "Linguistic": {
+                    "mean": 12.46,
+                    "variance": 1.2484000000000015
+                },
+                "Musical": {
+                    "mean": 7.34,
+                    "variance": 3.1043999999999996
+                },
+                "Bodily": {
+                    "mean": 7.04,
+                    "variance": 2.718399999999999
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.6,
+                    "variance": 2.439999999999999
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.92,
+                    "variance": 1.3136000000000003
+                },
+                "Interpersonal": {
+                    "mean": 11.58,
+                    "variance": 0.9236000000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.92,
+                    "variance": 2.713600000000001
+                },
+                "Naturalist": {
+                    "mean": 16.7,
+                    "variance": 0.20999999999999996
+                }
+            },
+            "Journalist": {
+                "Linguistic": {
+                    "mean": 17.88,
+                    "variance": 3.0656
+                },
+                "Musical": {
+                    "mean": 12.44,
+                    "variance": 0.8463999999999997
+                },
+                "Bodily": {
+                    "mean": 7.4,
+                    "variance": 3.4
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.66,
+                    "variance": 2.1843999999999992
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.52,
+                    "variance": 0.7695999999999998
+                },
+                "Interpersonal": {
+                    "mean": 17,
+                    "variance": 0.68
+                },
+                "Intrapersonal": {
+                    "mean": 12.54,
+                    "variance": 1.2884000000000015
+                },
+                "Naturalist": {
+                    "mean": 11.88,
+                    "variance": 1.5856000000000008
+                }
+            },
+            "Language Teacher": {
+                "Linguistic": {
+                    "mean": 17.38,
+                    "variance": 2.4356000000000013
+                },
+                "Musical": {
+                    "mean": 12.56,
+                    "variance": 1.2463999999999995
+                },
+                "Bodily": {
+                    "mean": 5.74,
+                    "variance": 0.4724000000000002
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.12,
+                    "variance": 0.9455999999999993
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.28,
+                    "variance": 3.3615999999999993
+                },
+                "Interpersonal": {
+                    "mean": 17.98,
+                    "variance": 2.9796000000000014
+                },
+                "Intrapersonal": {
+                    "mean": 17.5,
+                    "variance": 1.93
+                },
+                "Naturalist": {
+                    "mean": 12.96,
+                    "variance": 0.7183999999999997
+                }
+            },
+            "Poet": {
+                "Linguistic": {
+                    "mean": 17.58,
+                    "variance": 1.9235999999999995
+                },
+                "Musical": {
+                    "mean": 18.84,
+                    "variance": 0.7344000000000002
+                },
+                "Bodily": {
+                    "mean": 12.02,
+                    "variance": 1.2995999999999992
+                },
+                "Logical - Mathematical": {
+                    "mean": 7.14,
+                    "variance": 3.4803999999999986
+                },
+                "Spatial-Visualization": {
+                    "mean": 8.24,
+                    "variance": 0.9024000000000001
+                },
+                "Interpersonal": {
+                    "mean": 12.62,
+                    "variance": 1.0355999999999996
+                },
+                "Intrapersonal": {
+                    "mean": 16.48,
+                    "variance": 1.8895999999999995
+                },
+                "Naturalist": {
+                    "mean": 12.14,
+                    "variance": 1.3203999999999985
+                }
+            },
+            "Broadcaster": {
+                "Linguistic": {
+                    "mean": 17.94,
+                    "variance": 1.5363999999999998
+                },
+                "Musical": {
+                    "mean": 12.16,
+                    "variance": 1.5743999999999994
+                },
+                "Bodily": {
+                    "mean": 17.4,
+                    "variance": 1.7199999999999986
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.38,
+                    "variance": 1.3955999999999995
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.2,
+                    "variance": 2.96
+                },
+                "Interpersonal": {
+                    "mean": 17.78,
+                    "variance": 2.6916
+                },
+                "Intrapersonal": {
+                    "mean": 7.2,
+                    "variance": 2.8400000000000007
+                },
+                "Naturalist": {
+                    "mean": 12.52,
+                    "variance": 1.1696000000000009
+                }
+            },
+            "Artist": {
+                "Linguistic": {
+                    "mean": 12.52,
+                    "variance": 1.209600000000001
+                },
+                "Musical": {
+                    "mean": 17.76,
+                    "variance": 2.0624
+                },
+                "Bodily": {
+                    "mean": 12.56,
+                    "variance": 1.2463999999999995
+                },
+                "Logical - Mathematical": {
+                    "mean": 6.82,
+                    "variance": 1.8675999999999988
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.58,
+                    "variance": 2.9635999999999996
+                },
+                "Interpersonal": {
+                    "mean": 12.82,
+                    "variance": 0.7075999999999997
+                },
+                "Intrapersonal": {
+                    "mean": 16.94,
+                    "variance": 2.456399999999999
+                },
+                "Naturalist": {
+                    "mean": 17.76,
+                    "variance": 2.8623999999999996
+                }
+            },
+            "Graphic Designer": {
+                "Linguistic": {
+                    "mean": 12.48,
+                    "variance": 1.4096000000000009
+                },
+                "Musical": {
+                    "mean": 7.5,
+                    "variance": 2.37
+                },
+                "Bodily": {
+                    "mean": 7.2,
+                    "variance": 2.560000000000001
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.02,
+                    "variance": 2.579600000000002
+                },
+                "Spatial-Visualization": {
+                    "mean": 17.4,
+                    "variance": 2.32
+                },
+                "Interpersonal": {
+                    "mean": 12,
+                    "variance": 1.36
+                },
+                "Intrapersonal": {
+                    "mean": 12.8,
+                    "variance": 0.4399999999999997
+                },
+                "Naturalist": {
+                    "mean": 7.8,
+                    "variance": 2.2800000000000016
+                }
+            },
+            "Fashion Designer": {
+                "Linguistic": {
+                    "mean": 6.52,
+                    "variance": 1.2496000000000012
+                },
+                "Musical": {
+                    "mean": 7.96,
+                    "variance": 0.7184000000000005
+                },
+                "Bodily": {
+                    "mean": 12.48,
+                    "variance": 1.4096000000000009
+                },
+                "Logical - Mathematical": {
+                    "mean": 12.6,
+                    "variance": 1.1200000000000003
+                },
+                "Spatial-Visualization": {
+                    "mean": 8.42,
+                    "variance": 1.3636
+                },
+                "Interpersonal": {
+                    "mean": 18,
+                    "variance": 1.0e-9
+                },
+                "Intrapersonal": {
+                    "mean": 16,
+                    "variance": 1.0e-9
+                },
+                "Naturalist": {
+                    "mean": 15,
+                    "variance": 1.0e-9
+                }
+            },
+            "Interior Decorator": {
+                "Linguistic": {
+                    "mean": 12.4,
+                    "variance": 1.0400000000000003
+                },
+                "Musical": {
+                    "mean": 7,
+                    "variance": 1.0e-9
+                },
+                "Bodily": {
+                    "mean": 6.52,
+                    "variance": 1.2496000000000012
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 16.5,
+                    "variance": 2.01
+                },
+                "Interpersonal": {
+                    "mean": 17.5,
+                    "variance": 1.93
+                },
+                "Intrapersonal": {
+                    "mean": 12.94,
+                    "variance": 0.7764000000000002
+                },
+                "Naturalist": {
+                    "mean": 12.06,
+                    "variance": 1.6563999999999992
+                }
+            },
+            "Pilot": {
+                "Linguistic": {
+                    "mean": 7.52,
+                    "variance": 2.7296000000000005
+                },
+                "Musical": {
+                    "mean": 6.52,
+                    "variance": 1.2496000000000012
+                },
+                "Bodily": {
+                    "mean": 16.66,
+                    "variance": 0.6644000000000004
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.04,
+                    "variance": 2.958399999999997
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.4,
+                    "variance": 1.0400000000000003
+                },
+                "Interpersonal": {
+                    "mean": 13,
+                    "variance": 0.6
+                },
+                "Intrapersonal": {
+                    "mean": 6.66,
+                    "variance": 1.5044000000000002
+                },
+                "Naturalist": {
+                    "mean": 18.42,
+                    "variance": 1.3635999999999995
+                }
+            },
+            "Psychologist": {
+                "Linguistic": {
+                    "mean": 12.64,
+                    "variance": 1.0303999999999989
+                },
+                "Musical": {
+                    "mean": 12.02,
+                    "variance": 1.0995999999999995
+                },
+                "Bodily": {
+                    "mean": 6.08,
+                    "variance": 2.073599999999999
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.64,
+                    "variance": 1.1503999999999985
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.64,
+                    "variance": 2.1904000000000012
+                },
+                "Interpersonal": {
+                    "mean": 18.4,
+                    "variance": 1.3999999999999992
+                },
+                "Intrapersonal": {
+                    "mean": 18.58,
+                    "variance": 1.5635999999999999
+                },
+                "Naturalist": {
+                    "mean": 12.38,
+                    "variance": 0.9955999999999999
+                }
+            },
+            "Philosopher": {
+                "Linguistic": {
+                    "mean": 12.34,
+                    "variance": 0.9044000000000004
+                },
+                "Musical": {
+                    "mean": 7.04,
+                    "variance": 2.438399999999999
+                },
+                "Bodily": {
+                    "mean": 7.96,
+                    "variance": 0.7184000000000005
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.08,
+                    "variance": 2.073599999999999
+                },
+                "Interpersonal": {
+                    "mean": 18.02,
+                    "variance": 1.6996
+                },
+                "Intrapersonal": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Naturalist": {
+                    "mean": 12.9,
+                    "variance": 0.73
+                }
+            },
+            "Writer": {
+                "Linguistic": {
+                    "mean": 17.78,
+                    "variance": 1.8916000000000008
+                },
+                "Musical": {
+                    "mean": 12.9,
+                    "variance": 0.73
+                },
+                "Bodily": {
+                    "mean": 7.96,
+                    "variance": 0.7184000000000005
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 6.08,
+                    "variance": 2.073599999999999
+                },
+                "Interpersonal": {
+                    "mean": 12.9,
+                    "variance": 0.73
+                },
+                "Intrapersonal": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Naturalist": {
+                    "mean": 12.9,
+                    "variance": 0.73
+                }
+            },
+            "Criminologist": {
+                "Linguistic": {
+                    "mean": 7.28,
+                    "variance": 3.1216000000000004
+                },
+                "Musical": {
+                    "mean": 7.96,
+                    "variance": 0.7184000000000005
+                },
+                "Bodily": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.54,
+                    "variance": 0.9284000000000014
+                },
+                "Interpersonal": {
+                    "mean": 17.24,
+                    "variance": 2.3823999999999996
+                },
+                "Intrapersonal": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Naturalist": {
+                    "mean": 12.94,
+                    "variance": 0.8163999999999996
+                }
+            },
+            "Company secretary": {
+                "Linguistic": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Musical": {
+                    "mean": 7.96,
+                    "variance": 0.7184000000000005
+                },
+                "Bodily": {
+                    "mean": 12.9,
+                    "variance": 0.73
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.2,
+                    "variance": 2.4000000000000012
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Interpersonal": {
+                    "mean": 17.46,
+                    "variance": 2.8484000000000016
+                },
+                "Intrapersonal": {
+                    "mean": 17.26,
+                    "variance": 2.3524000000000003
+                },
+                "Naturalist": {
+                    "mean": 6.08,
+                    "variance": 2.073599999999999
+                }
+            },
+            "Marketing": {
+                "Linguistic": {
+                    "mean": 17.8,
+                    "variance": 2.3200000000000007
+                },
+                "Musical": {
+                    "mean": 7.5,
+                    "variance": 2.89
+                },
+                "Bodily": {
+                    "mean": 12.5,
+                    "variance": 1.21
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.54,
+                    "variance": 2.8484000000000016
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.42,
+                    "variance": 2.9636
+                },
+                "Interpersonal": {
+                    "mean": 17,
+                    "variance": 1.92
+                },
+                "Intrapersonal": {
+                    "mean": 12.5,
+                    "variance": 1.01
+                },
+                "Naturalist": {
+                    "mean": 7.66,
+                    "variance": 2.784399999999999
+                }
+            },
+            "Logistics manager": {
+                "Linguistic": {
+                    "mean": 12.5,
+                    "variance": 1.17
+                },
+                "Musical": {
+                    "mean": 7.54,
+                    "variance": 2.8484000000000003
+                },
+                "Bodily": {
+                    "mean": 7.48,
+                    "variance": 2.8496000000000006
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.72,
+                    "variance": 2.441600000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.8,
+                    "variance": 1.9599999999999995
+                },
+                "Interpersonal": {
+                    "mean": 17.38,
+                    "variance": 2.355600000000001
+                },
+                "Intrapersonal": {
+                    "mean": 17.18,
+                    "variance": 2.3075999999999985
+                },
+                "Naturalist": {
+                    "mean": 7,
+                    "variance": 1.0e-9
+                }
+            },
+            "Research analyst": {
+                "Linguistic": {
+                    "mean": 17.86,
+                    "variance": 1.9203999999999974
+                },
+                "Musical": {
+                    "mean": 7.54,
+                    "variance": 2.8484000000000003
+                },
+                "Bodily": {
+                    "mean": 6.42,
+                    "variance": 0.5635999999999999
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.6,
+                    "variance": 2.359999999999998
+                },
+                "Spatial-Visualization": {
+                    "mean": 8.68,
+                    "variance": 1.457600000000002
+                },
+                "Interpersonal": {
+                    "mean": 11.98,
+                    "variance": 0.9795999999999995
+                },
+                "Intrapersonal": {
+                    "mean": 17.1,
+                    "variance": 1.9700000000000006
+                },
+                "Naturalist": {
+                    "mean": 12.54,
+                    "variance": 1.2484000000000017
+                }
+            },
+            "Business manager": {
+                "Linguistic": {
+                    "mean": 17.54,
+                    "variance": 2.8484000000000016
+                },
+                "Musical": {
+                    "mean": 7.3,
+                    "variance": 2.7300000000000004
+                },
+                "Bodily": {
+                    "mean": 12.54,
+                    "variance": 1.2484000000000017
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.62,
+                    "variance": 2.955600000000002
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.44,
+                    "variance": 1.3663999999999994
+                },
+                "Interpersonal": {
+                    "mean": 17.22,
+                    "variance": 1.8916000000000008
+                },
+                "Intrapersonal": {
+                    "mean": 17.38,
+                    "variance": 2.2355999999999994
+                },
+                "Naturalist": {
+                    "mean": 7.54,
+                    "variance": 2.8484000000000003
+                }
+            },
+            "Internal auditor": {
+                "Linguistic": {
+                    "mean": 12.4,
+                    "variance": 1.0400000000000003
+                },
+                "Musical": {
+                    "mean": 7.24,
+                    "variance": 2.5823999999999994
+                },
+                "Bodily": {
+                    "mean": 7.3,
+                    "variance": 2.57
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.44,
+                    "variance": 1.286400000000001
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.3,
+                    "variance": 1.2500000000000013
+                },
+                "Interpersonal": {
+                    "mean": 18.94,
+                    "variance": 1.0563999999999993
+                },
+                "Intrapersonal": {
+                    "mean": 19,
+                    "variance": 1.0e-9
+                },
+                "Naturalist": {
+                    "mean": 7.54,
+                    "variance": 2.8484000000000003
+                }
+            },
+            "Chief financial officer": {
+                "Linguistic": {
+                    "mean": 12.48,
+                    "variance": 1.2496000000000012
+                },
+                "Musical": {
+                    "mean": 6.64,
+                    "variance": 0.9104000000000002
+                },
+                "Bodily": {
+                    "mean": 12.48,
+                    "variance": 1.2096000000000011
+                },
+                "Logical - Mathematical": {
+                    "mean": 17.36,
+                    "variance": 2.3503999999999983
+                },
+                "Spatial-Visualization": {
+                    "mean": 9.06,
+                    "variance": 0.5763999999999999
+                },
+                "Interpersonal": {
+                    "mean": 18.46,
+                    "variance": 0.28839999999999993
+                },
+                "Intrapersonal": {
+                    "mean": 16.98,
+                    "variance": 2.0196
+                },
+                "Naturalist": {
+                    "mean": 6.62,
+                    "variance": 1.1956000000000002
+                }
+            },
+            "Business Analyst": {
+                "Linguistic": {
+                    "mean": 12.48,
+                    "variance": 1.2096000000000011
+                },
+                "Musical": {
+                    "mean": 6.62,
+                    "variance": 1.1956000000000002
+                },
+                "Bodily": {
+                    "mean": 5.64,
+                    "variance": 0.47040000000000004
+                },
+                "Logical - Mathematical": {
+                    "mean": 18.26,
+                    "variance": 2.072399999999999
+                },
+                "Spatial-Visualization": {
+                    "mean": 12.68,
+                    "variance": 1.0976000000000008
+                },
+                "Interpersonal": {
+                    "mean": 18.6,
+                    "variance": 1.0399999999999994
+                },
+                "Intrapersonal": {
+                    "mean": 17.54,
+                    "variance": 1.328400000000003
+                },
+                "Naturalist": {
+                    "mean": 6,
+                    "variance": 1.0e-9
+                }
+            },
+            "Banking": {
+                "Linguistic": {
+                    "mean": 12,
+                    "variance": 1.0e-9
+                },
+                "Musical": {
+                    "mean": 6.433333333333334,
+                    "variance": 1.2455555555555553
+                },
+                "Bodily": {
+                    "mean": 8.1,
+                    "variance": 2.4899999999999998
+                },
+                "Logical - Mathematical": {
+                    "mean": 16.233333333333334,
+                    "variance": 0.5788888888888889
+                },
+                "Spatial-Visualization": {
+                    "mean": 7.9,
+                    "variance": 0.6900000000000007
+                },
+                "Interpersonal": {
+                    "mean": 15,
+                    "variance": 1.0e-9
+                },
+                "Intrapersonal": {
+                    "mean": 11,
+                    "variance": 1.0e-9
+                },
+                "Naturalist": {
+                    "mean": 6,
+                    "variance": 0.6666666666666666
+                }
+            }
+        },
+        "priors": {
+            "Astronomer": 0.017361111111111112,
+            "Geologist": 0.017361111111111112,
+            "Marine Biologist": 0.017361111111111112,
+            "Veterinarian": 0.017361111111111112,
+            "Nature photographer": 0.017361111111111112,
+            "Recording engineer": 0.017361111111111112,
+            "Audiologist": 0.017361111111111112,
+            "Sound editor": 0.017361111111111112,
+            "Music teacher": 0.017361111111111112,
+            "Actuary": 0.017361111111111112,
+            "Chartered Accountant": 0.017361111111111112,
+            "Computer analyst": 0.017361111111111112,
+            "Computer programmer": 0.017361111111111112,
+            "Database designer": 0.017361111111111112,
+            "Economist": 0.017361111111111112,
+            "Librarian": 0.017361111111111112,
+            "Engineer": 0.017361111111111112,
+            "Lawyer": 0.017361111111111112,
+            "Pharmacist": 0.017361111111111112,
+            "Physician": 0.017361111111111112,
+            "Physicist": 0.017361111111111112,
+            "Mathematician": 0.017361111111111112,
+            "Leader": 0.017361111111111112,
+            "Manager": 0.017361111111111112,
+            "Politician": 0.017361111111111112,
+            "Social Worker": 0.017361111111111112,
+            "Receptionist": 0.017361111111111112,
+            "Sales Representative": 0.017361111111111112,
+            "Counselor": 0.017361111111111112,
+            "Athlete": 0.017361111111111112,
+            "Dancer": 0.017361111111111112,
+            "Mechanic": 0.017361111111111112,
+            "Actor \/ Actress": 0.017361111111111112,
+            "Physical Therapist": 0.017361111111111112,
+            "Editor": 0.017361111111111112,
+            "Historian": 0.017361111111111112,
+            "Journalist": 0.017361111111111112,
+            "Language Teacher": 0.017361111111111112,
+            "Poet": 0.017361111111111112,
+            "Broadcaster": 0.017361111111111112,
+            "Artist": 0.017361111111111112,
+            "Graphic Designer": 0.017361111111111112,
+            "Fashion Designer": 0.017361111111111112,
+            "Interior Decorator": 0.017361111111111112,
+            "Pilot": 0.017361111111111112,
+            "Psychologist": 0.017361111111111112,
+            "Philosopher": 0.017361111111111112,
+            "Writer": 0.017361111111111112,
+            "Criminologist": 0.017361111111111112,
+            "Company secretary": 0.017361111111111112,
+            "Marketing": 0.017361111111111112,
+            "Logistics manager": 0.017361111111111112,
+            "Research analyst": 0.017361111111111112,
+            "Business manager": 0.017361111111111112,
+            "Internal auditor": 0.017361111111111112,
+            "Chief financial officer": 0.017361111111111112,
+            "Business Analyst": 0.017361111111111112,
+            "Banking": 0.010416666666666666
+        }
+    }
+}
